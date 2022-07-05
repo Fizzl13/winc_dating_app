@@ -32,16 +32,32 @@ while (answers.length < questions.length) {
   const question = questions[i];
   const answer = prompt(question);
 
-  if (answers.length == 0 && answer.length < 1) {
-    console.log("Please enter your first name");
+  if ((answers.length == 0 || answers.length == 1)&& answer.length < 1) {
+    console.log("Please enter your name");
     continue;
   }
 
-  if (answers.length == 1 && answer.length < 1) {
-    console.log("Please enter your last name");
+   if ((answers.length == 2 || answers.length == 6 || answers.length == 7)&& isNaN(answer)) {
+    console.log("Please enter a number");
     continue;
   }
-ss
+
+  
+
+  // if (answers.length == 3 && answer != ("X","F","M") )  {
+  //   console.log("Please fill in: M, F or X");
+  //   continue;
+  // } 
+
+  // if (answers.length == 4 && answer !== ("M", "F", "X", "B")) {
+  //   console.log("Please fill in: M, F, X or B");
+  //   continue;
+  // }
+
+    if ((answers.length == 6 || answers.length == 7) && answer < 18) {
+    console.log("All matches have to 18+ years");
+    continue;
+  }
 
   // Save the answer to variable 'answers'
   answers.push(answer);
