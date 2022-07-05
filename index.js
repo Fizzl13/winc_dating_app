@@ -41,8 +41,7 @@ while (answers.length < questions.length) {
     console.log("Please enter your last name");
     continue;
   }
-
-
+ss
 
   // Save the answer to variable 'answers'
   answers.push(answer);
