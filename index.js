@@ -13,12 +13,12 @@ const profile = {};
 const questions = [
   'What is your first name?',
   'What is your last name?',
-  // "What is your age?",
-  // "What is your gender?",
-  // "Which genders are you interested in dating?",
-  // "Where do you live?",
-  // "What minimum age would you be interested in?",
-  // "What maximum age would you be interested in?",
+  "What is your age?",
+  "What is your gender?",
+  "Which genders are you interested in dating?",
+  "Where do you live?",
+  "What minimum age would you be interested in?",
+  "What maximum age would you be interested in?",
 ];
 
 // set variable
@@ -32,16 +32,17 @@ while (answers.length < questions.length) {
   const question = questions[i];
   const answer = prompt(question);
 
-  // // answers can't be shorter than 2 characters
-  // if (answer.length < 2) {
-  //   console.log('This answer is too short');
-  //   continue;
-  // }
-
-  if (answers.length == 1 && answer.length < 4) {
-    console.log("Anwoord is te klein");
+  if (answers.length == 0 && answer.length < 1) {
+    console.log("Please enter your first name");
     continue;
   }
+
+  if (answers.length == 1 && answer.length < 1) {
+    console.log("Please enter your last name");
+    continue;
+  }
+
+
 
   // Save the answer to variable 'answers'
   answers.push(answer);
@@ -51,11 +52,12 @@ while (answers.length < questions.length) {
 // save answers in object
 profile.first_name = answers[0];
 profile.last_name = answers[1];
-profile.age = answers[2];
+profile.age = +answers[2];
 profile.gender = answers[3];
 profile.gender_interest = answers[4];
 profile.location = answers[5];
-profile.min_age_interest = answers[6];
-profile.max_age_interest = answers[7];
+profile.min_age_interest = +answers[6];
+profile.max_age_interest = +answers[7];
 
 console.log(profile);
+
