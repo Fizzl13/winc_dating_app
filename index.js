@@ -88,10 +88,8 @@ console.log(profile);
 
 */
 
-
-
 // Tests
-const testProfile = { "first_name": "Vince", "last_name": "Lems", "age": 19, "gender": "M", "gender_interest": "F", "location": "rural", "min_age_interest": 19, "max_age_interest": 60 }
+const testProfile = { "first_name": "Vince", "last_name": "Lems", "age": 50, "gender": "M", "gender_interest": "B", "location": "city", "min_age_interest": 18, "max_age_interest": 90 }
 
 // loop that iterates on the mockData array
 console.log(`The amount of people using the Winc Winc app (at this moment): ${mockData.length}. Based on your profile we have matched you with:\n`)
@@ -101,34 +99,22 @@ console.log(`The amount of people using the Winc Winc app (at this moment): ${mo
 // console.log(mockData[0].min_age_interest)
 // console.log(mockData[0].max_age_interest)
 
+// console.log(testProfile.gender)
+// console.log(mockData[0].gender)
+
 for (let i = 0; i < mockData.length; i++) {
   if (testProfile.age >= mockData[i].min_age_interest && testProfile.age <= mockData[i].max_age_interest) {
     if (mockData[i].min_age_interest <= testProfile.age && mockData[i].max_age_interest >= testProfile.age) {
-      console.log(mockData[i]);
+      if (testProfile.location == mockData[i].location) {
+        if (testProfile.gender_interest == mockData[i].gender) {
+          console.log(mockData[i]);
+        } else if ((testProfile.gender_interest == "B") && (["M","F"].includes(mockData[i].gender))) {
+          console.log(mockData[i]);
+        }
+      }
     }
   }
 }
 
-
-
-
-
-
-// const entries = Object.entries(mockData);
-// for (const entry in entries) {
-//   if ( entries[entry][0] !== "max_age_interest" ){
-//     console.log(`The ${entries[entry][0]} is ${entries[entry][1]}`)
-//   } else {
-//     console.log(`The hobbies are ${entries[entry][1].hobbies}`)
-//   }
-// }
-
-// const myKeys = Object.keys(myProfile.preferences);
-// const matchedKeys = Object.keys(matchedProfile.preferences);
-
-// if (myKeys.length === matchedKeys.length) {
-//   console.log("You have the same amount of preferences!")
-// }
-
-
-
+// console.log(mockData[i]);
+// !["rural","city"].includes(answer)
