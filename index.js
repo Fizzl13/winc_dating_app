@@ -14,9 +14,9 @@ const questions = [
   'What is your first name?',
   'What is your last name?',
   "What is your age?",
-  "What is your gender?",
-  "Which genders are you interested in dating?",
-  "Where do you live?",
+  "What is your gender? (M, F, X)",
+  "Which genders are you interested in dating? (M, F, X, B)",
+  "What is your location? (rural/city)",
   "What minimum age would you be interested in?",
   "What maximum age would you be interested in?",
 ];
@@ -32,19 +32,17 @@ while (answers.length < questions.length) {
   const question = questions[i];
   const answer = prompt(question);
 
-  if ((answers.length == 0 || answers.length == 1)&& answer.length < 1) {
+  if ((answers.length == 0 || answers.length == 1) && answer.length < 1) {
     console.log("Please enter your name");
     continue;
   }
 
-   if ((answers.length == 2 || answers.length == 6 || answers.length == 7)&& isNaN(answer)) {
+  if ((answers.length == 2 || answers.length == 6 || answers.length == 7) && isNaN(answer)) {
     console.log("Please enter a number");
     continue;
   }
 
- 
-
-  // if (answers.length == 3 && answer != ("X","F","M") )  {
+  // if (answers.length == 3 && answer !== ("M","F","X"))  {
   //   console.log("Please fill in: M, F or X");
   //   continue;
   // } 
@@ -54,7 +52,7 @@ while (answers.length < questions.length) {
   //   continue;
   // }
 
-    if ((answers.length == 6 || answers.length == 7) && answer < 18) {
+  if ((answers.length == 6 || answers.length == 7) && answer < 18) {
     console.log("All matches have to 18+ years");
     continue;
   }
