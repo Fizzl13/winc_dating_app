@@ -89,32 +89,21 @@ console.log(profile);
 */
 
 // Tests
-const testProfile = { "first_name": "Vince", "last_name": "Lems", "age": 50, "gender": "M", "gender_interest": "B", "location": "city", "min_age_interest": 18, "max_age_interest": 90 }
+const testProfile = { "first_name": "First", "last_name": "Last", "age": 50, "gender": "M", "gender_interest": "F", "location": "city", "min_age_interest": 18, "max_age_interest": 90 }
 
 // loop that iterates on the mockData array
 console.log(`The amount of people using the Winc Winc app (at this moment): ${mockData.length}. Based on your profile we have matched you with:\n`)
-
-// console.log(mockData[0])
-// console.log(mockData[0].first_name)
-// console.log(mockData[0].min_age_interest)
-// console.log(mockData[0].max_age_interest)
-
-// console.log(testProfile.gender)
-// console.log(mockData[0].gender)
 
 for (let i = 0; i < mockData.length; i++) {
   if (testProfile.age >= mockData[i].min_age_interest && testProfile.age <= mockData[i].max_age_interest) {
     if (mockData[i].min_age_interest <= testProfile.age && mockData[i].max_age_interest >= testProfile.age) {
       if (testProfile.location == mockData[i].location) {
-        if (testProfile.gender_interest == mockData[i].gender) {
-          console.log(mockData[i]);
-        } else if ((testProfile.gender_interest == "B") && (["M","F"].includes(mockData[i].gender))) {
-          console.log(mockData[i]);
+        if ((testProfile.gender_interest == mockData[i].gender) || (testProfile.gender_interest == "B") && (["M", "F"].includes(mockData[i].gender))) {
+          if ((mockData[i].gender_interest == testProfile.gender) || (mockData[i].gender_interest == "B") && (["M", "F"].includes(testProfile.gender))) {
+            console.log(mockData[i]);
+          }
         }
       }
     }
   }
 }
-
-// console.log(mockData[i]);
-// !["rural","city"].includes(answer)
