@@ -88,13 +88,17 @@ console.log(`\nYour profile: \nI am ${profile.first_name} ${profile.last_name} a
 // loop that iterates on the mockData array
 console.log(`The amount of people using the Winc Winc app (at this moment): ${mockData.length}. Based on your profile we have matched you with the following people:\n`);
 
+let counter = 0;
+
 for (let i = 0; i < mockData.length; i++) {
   if (profile.age >= mockData[i].min_age_interest && profile.age <= mockData[i].max_age_interest) {
     if (mockData[i].min_age_interest <= profile.age && mockData[i].max_age_interest >= profile.age) {
       if (profile.location == mockData[i].location) {
         if ((profile.gender_interest == mockData[i].gender) || (profile.gender_interest == "B") && (["M", "F"].includes(mockData[i].gender))) {
           if ((mockData[i].gender_interest == profile.gender) || (mockData[i].gender_interest == "B") && (["M", "F"].includes(profile.gender))) {
-            console.log(`\nHi! I am ${mockData[i].first_name} ${mockData[i].last_name} and I am ${mockData[i].age} years old. I identify myself as a ${mockData[i].gender} and am interested in ${mockData[i].gender_interest}. My current location is: ${mockData[i].location}. And I am looking for a parter who is between ${mockData[i].min_age_interest} and ${mockData[i].max_age_interest} years old.\n`);
+            console.log(`Match number ${counter+1}:`)
+            console.log(`Hi! I am ${mockData[i].first_name} ${mockData[i].last_name} and I am ${mockData[i].age} years old. I identify myself as a ${mockData[i].gender} and am interested in ${mockData[i].gender_interest}. My current location is: ${mockData[i].location}. And I am looking for a parter who is between ${mockData[i].min_age_interest} and ${mockData[i].max_age_interest} years old.\n`);
+            counter++;
           }
         }
       }
@@ -102,5 +106,4 @@ for (let i = 0; i < mockData.length; i++) {
   }
 }
 
-// Tests
-// const testProfile = { "first_name": "First", "last_name": "Last", "age": 50, "gender": "F", "gender_interest": "F", "location": "city", "min_age_interest": 18, "max_age_interest": 90 }
+console.log(`In total you have ${counter} matches!`);
