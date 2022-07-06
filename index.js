@@ -42,7 +42,7 @@ while (answers.length < questions.length) {
     continue;
   }
 
-  
+ 
 
   // if (answers.length == 3 && answer != ("X","F","M") )  {
   //   console.log("Please fill in: M, F or X");
@@ -56,6 +56,11 @@ while (answers.length < questions.length) {
 
     if ((answers.length == 6 || answers.length == 7) && answer < 18) {
     console.log("All matches have to 18+ years");
+    continue;
+  }
+
+  if (answers.length == 7 && answer < answers[6]) {
+    console.log("The maximum age can't be lower than the minimum age");
     continue;
   }
 
@@ -75,4 +80,5 @@ profile.min_age_interest = +answers[6];
 profile.max_age_interest = +answers[7];
 
 console.log(profile);
+
 
