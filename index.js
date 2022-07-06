@@ -1,4 +1,4 @@
-'use strict';
+'use strict'; 
 
 // task: get relevant data from the user and match the user with another person based on certain preferences.
 
