@@ -91,25 +91,27 @@ console.log(profile);
 
 
 // Tests
-const testProfile = { "first_name": "Vince", "last_name": "Lems", "age": 90, "gender": "M", "gender_interest": "F", "location": "rural", "min_age_interest": 20, "max_age_interest": 25 }
+const testProfile = { "first_name": "Vince", "last_name": "Lems", "age": 19, "gender": "M", "gender_interest": "F", "location": "rural", "min_age_interest": 19, "max_age_interest": 60 }
 
 // loop that iterates on the mockData array
 console.log(`The amount of people using the Winc Winc app (at this moment): ${mockData.length}. Based on your profile we have matched you with:\n`)
 
-
-console.log(mockData[0].first_name)
-console.log(mockData[0].min_age_interest)
-console.log(mockData[0].max_age_interest)
-
+// console.log(mockData[0])
+// console.log(mockData[0].first_name)
+// console.log(mockData[0].min_age_interest)
+// console.log(mockData[0].max_age_interest)
 
 for (let i = 0; i < mockData.length; i++) {
-  if (testProfile.age > mockData[i].min_age_interest && testProfile.age < mockData[i].max_age_interest) {
-    if (mockData[i].first_name === 'Putnam') {
-      
+  if (testProfile.age >= mockData[i].min_age_interest && testProfile.age <= mockData[i].max_age_interest) {
+    if (mockData[i].min_age_interest <= testProfile.age && mockData[i].max_age_interest >= testProfile.age) {
+      console.log(mockData[i]);
     }
   }
-  console.log[i.length]
 }
+
+
+
+
 
 
 // const entries = Object.entries(mockData);

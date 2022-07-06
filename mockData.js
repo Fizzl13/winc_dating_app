@@ -6,7 +6,7 @@ module.exports = {
   { "first_name": "Caldwell", "last_name": "Semarke", "age": 95, "gender": "M", "gender_interest": "M", "location": "city", "min_age_interest": 56, "max_age_interest": 79 },
   { "first_name": "Linn", "last_name": "Cashin", "age": 81, "gender": "M", "gender_interest": "X", "location": "city", "min_age_interest": 84, "max_age_interest": 100 },
   { "first_name": "Zebulon", "last_name": "Bucksey", "age": 65, "gender": "X", "gender_interest": "X", "location": "city", "min_age_interest": 92, "max_age_interest": 97 },
-  { "first_name": "Lyndy", "last_name": "Medler", "age": 31, "gender": "M", "gender_interest": "M", "location": "city", "min_age_interest": 54, "max_age_interest": 88 }, /*
+  { "first_name": "Lyndy", "last_name": "Medler", "age": 31, "gender": "M", "gender_interest": "M", "location": "city", "min_age_interest": 54, "max_age_interest": 88 },
   { "first_name": "Debora", "last_name": "Braghini", "age": 19, "gender": "F", "gender_interest": "X", "location": "rural", "min_age_interest": 74, "max_age_interest": 84 },
   { "first_name": "Giacopo", "last_name": "Spinke", "age": 70, "gender": "X", "gender_interest": "X", "location": "city", "min_age_interest": 66, "max_age_interest": 83 },
   { "first_name": "Klarrisa", "last_name": "Dust", "age": 70, "gender": "M", "gender_interest": "X", "location": "rural", "min_age_interest": 72, "max_age_interest": 83 },
@@ -97,6 +97,6 @@ module.exports = {
   { "first_name": "Harriot", "last_name": "Leedal", "age": 27, "gender": "M", "gender_interest": "M", "location": "city", "min_age_interest": 31, "max_age_interest": 64 },
   { "first_name": "Matelda", "last_name": "Ellam", "age": 78, "gender": "F", "gender_interest": "F", "location": "rural", "min_age_interest": 34, "max_age_interest": 67 },
   { "first_name": "Marleah", "last_name": "Leggan", "age": 62, "gender": "X", "gender_interest": "X", "location": "rural", "min_age_interest": 59, "max_age_interest": 97 },
-  { "first_name": "Gaultiero", "last_name": "Lawey", "age": 87, "gender": "X", "gender_interest": "X", "location": "rural", "min_age_interest": 89, "max_age_interest": 97 },*/
+  { "first_name": "Gaultiero", "last_name": "Lawey", "age": 87, "gender": "X", "gender_interest": "X", "location": "rural", "min_age_interest": 89, "max_age_interest": 97 },
   { "first_name": "Payton", "last_name": "Lonsbrough", "age": 49, "gender": "F", "gender_interest": "M", "location": "city", "min_age_interest": 54, "max_age_interest": 70 }]
 }
