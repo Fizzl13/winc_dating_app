@@ -6,7 +6,6 @@ const mockData = require('./mockData.js').data;
 
 console.log('Welcome! You will be asked a couple of questions: \n');
 
-/*
 
 // Empty profile object
 const profile = {};
@@ -44,17 +43,17 @@ while (answers.length < questions.length) {
     continue;
   }
 
-  if (answers.length == 3 && !["M","F","X"].includes(answer)) {
+  if (answers.length == 3 && !["M", "F", "X"].includes(answer)) {
     console.log("Please fill in: M, F or X");
     continue;
   }
 
-  if (answers.length == 4 && !["M","F","X","B"].includes(answer)) {
+  if (answers.length == 4 && !["M", "F", "X", "B"].includes(answer)) {
     console.log("Please fill in: M, F, X or B");
     continue;
   }
 
-  if (answers.length == 5 && !["rural","city"].includes(answer)) {
+  if (answers.length == 5 && !["rural", "city"].includes(answer)) {
     console.log("Please fill in: rural or city")
     continue;
   }
@@ -86,20 +85,15 @@ profile.max_age_interest = +answers[7];
 
 console.log(profile);
 
-*/
-
-// Tests
-const testProfile = { "first_name": "First", "last_name": "Last", "age": 50, "gender": "M", "gender_interest": "F", "location": "city", "min_age_interest": 18, "max_age_interest": 90 }
-
 // loop that iterates on the mockData array
 console.log(`The amount of people using the Winc Winc app (at this moment): ${mockData.length}. Based on your profile we have matched you with:\n`)
 
 for (let i = 0; i < mockData.length; i++) {
-  if (testProfile.age >= mockData[i].min_age_interest && testProfile.age <= mockData[i].max_age_interest) {
-    if (mockData[i].min_age_interest <= testProfile.age && mockData[i].max_age_interest >= testProfile.age) {
-      if (testProfile.location == mockData[i].location) {
-        if ((testProfile.gender_interest == mockData[i].gender) || (testProfile.gender_interest == "B") && (["M", "F"].includes(mockData[i].gender))) {
-          if ((mockData[i].gender_interest == testProfile.gender) || (mockData[i].gender_interest == "B") && (["M", "F"].includes(testProfile.gender))) {
+  if (profile.age >= mockData[i].min_age_interest && profile.age <= mockData[i].max_age_interest) {
+    if (mockData[i].min_age_interest <= profile.age && mockData[i].max_age_interest >= profile.age) {
+      if (profile.location == mockData[i].location) {
+        if ((profile.gender_interest == mockData[i].gender) || (profile.gender_interest == "B") && (["M", "F"].includes(mockData[i].gender))) {
+          if ((mockData[i].gender_interest == profile.gender) || (mockData[i].gender_interest == "B") && (["M", "F"].includes(profile.gender))) {
             console.log(mockData[i]);
           }
         }
@@ -107,3 +101,6 @@ for (let i = 0; i < mockData.length; i++) {
     }
   }
 }
+
+// Tests
+// const testProfile = { "first_name": "First", "last_name": "Last", "age": 50, "gender": "F", "gender_interest": "F", "location": "city", "min_age_interest": 18, "max_age_interest": 90 }
