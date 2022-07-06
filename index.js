@@ -6,6 +6,8 @@ const mockData = require('./mockData.js').data;
 
 console.log('Welcome! You will be asked a couple of questions: \n');
 
+/*
+
 // Empty profile object
 const profile = {};
 
@@ -42,15 +44,20 @@ while (answers.length < questions.length) {
     continue;
   }
 
-  // if (answers.length == 3 && answer !== ("M","F","X"))  {
-  //   console.log("Please fill in: M, F or X");
-  //   continue;
-  // } 
+  if (answers.length == 3 && !["M","F","X"].includes(answer)) {
+    console.log("Please fill in: M, F or X");
+    continue;
+  }
 
-  // if (answers.length == 4 && answer !== ("M", "F", "X", "B")) {
-  //   console.log("Please fill in: M, F, X or B");
-  //   continue;
-  // }
+  if (answers.length == 4 && !["M","F","X","B"].includes(answer)) {
+    console.log("Please fill in: M, F, X or B");
+    continue;
+  }
+
+  if (answers.length == 5 && !["rural","city"].includes(answer)) {
+    console.log("Please fill in: rural or city")
+    continue;
+  }
 
   if ((answers.length == 6 || answers.length == 7) && answer < 18) {
     console.log("All matches have to 18+ years");
@@ -78,5 +85,48 @@ profile.min_age_interest = +answers[6];
 profile.max_age_interest = +answers[7];
 
 console.log(profile);
+
+*/
+
+
+
+// Tests
+const testProfile = { "first_name": "Vince", "last_name": "Lems", "age": 90, "gender": "M", "gender_interest": "F", "location": "rural", "min_age_interest": 20, "max_age_interest": 25 }
+
+// loop that iterates on the mockData array
+console.log(`The amount of people using the Winc Winc app (at this moment): ${mockData.length}. Based on your profile we have matched you with:\n`)
+
+
+console.log(mockData[0].first_name)
+console.log(mockData[0].min_age_interest)
+console.log(mockData[0].max_age_interest)
+
+
+for (let i = 0; i < mockData.length; i++) {
+  if (testProfile.age > mockData[i].min_age_interest && testProfile.age < mockData[i].max_age_interest) {
+    if (mockData[i].first_name === 'Putnam') {
+      
+    }
+  }
+  console.log[i.length]
+}
+
+
+// const entries = Object.entries(mockData);
+// for (const entry in entries) {
+//   if ( entries[entry][0] !== "max_age_interest" ){
+//     console.log(`The ${entries[entry][0]} is ${entries[entry][1]}`)
+//   } else {
+//     console.log(`The hobbies are ${entries[entry][1].hobbies}`)
+//   }
+// }
+
+// const myKeys = Object.keys(myProfile.preferences);
+// const matchedKeys = Object.keys(matchedProfile.preferences);
+
+// if (myKeys.length === matchedKeys.length) {
+//   console.log("You have the same amount of preferences!")
+// }
+
 
 
