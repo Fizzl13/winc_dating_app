@@ -1,13 +1,12 @@
 'use strict';
 
-// Task: get relevant data from the user and match the user with another person based on certain preferences.
+// task: get relevant data from the user and match the user with another person based on certain preferences.
 
 const mockData = require('./mockData.js').data;
 
-console.log('Welcome! You will be asked a couple of questions: \n');
+console.log('Welcome! You will be asked a couple of questions in order to create your profile: \n');
 
-
-// Empty profile object
+// empty profile object
 const profile = {};
 
 // Variable array with questions
@@ -68,7 +67,7 @@ while (answers.length < questions.length) {
     continue;
   }
 
-  // Save the answer to variable 'answers'
+  // save the answer to variable 'answers'
   answers.push(answer);
   i++;
 }
@@ -83,10 +82,11 @@ profile.location = answers[5];
 profile.min_age_interest = +answers[6];
 profile.max_age_interest = +answers[7];
 
-console.log(profile);
+// log your own profile
+console.log(`\nYour profile: \nI am ${profile.first_name} ${profile.last_name} and I am ${profile.age} years old. I identify myself as a ${profile.gender} and am interested in ${profile.gender_interest}. My current location is: ${profile.location}. And I am looking for a parter who is between ${profile.min_age_interest} and ${profile.max_age_interest} years old.\n`);
 
 // loop that iterates on the mockData array
-console.log(`The amount of people using the Winc Winc app (at this moment): ${mockData.length}. Based on your profile we have matched you with:\n`)
+console.log(`The amount of people using the Winc Winc app (at this moment): ${mockData.length}. Based on your profile we have matched you with the following people:\n`);
 
 for (let i = 0; i < mockData.length; i++) {
   if (profile.age >= mockData[i].min_age_interest && profile.age <= mockData[i].max_age_interest) {
@@ -94,7 +94,7 @@ for (let i = 0; i < mockData.length; i++) {
       if (profile.location == mockData[i].location) {
         if ((profile.gender_interest == mockData[i].gender) || (profile.gender_interest == "B") && (["M", "F"].includes(mockData[i].gender))) {
           if ((mockData[i].gender_interest == profile.gender) || (mockData[i].gender_interest == "B") && (["M", "F"].includes(profile.gender))) {
-            console.log(mockData[i]);
+            console.log(`\nHi! I am ${mockData[i].first_name} ${mockData[i].last_name} and I am ${mockData[i].age} years old. I identify myself as a ${mockData[i].gender} and am interested in ${mockData[i].gender_interest}. My current location is: ${mockData[i].location}. And I am looking for a parter who is between ${mockData[i].min_age_interest} and ${mockData[i].max_age_interest} years old.\n`);
           }
         }
       }
