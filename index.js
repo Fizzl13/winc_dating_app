@@ -32,36 +32,43 @@ while (answers.length < questions.length) {
   const question = questions[i];
   const answer = prompt(question);
 
+  // correct input (no empty strings)
   if ((answers.length == 0 || answers.length == 1) && answer.length < 1) {
     console.log("Please enter your name");
     continue;
   }
 
+  // correct input (numbers)
   if ((answers.length == 2 || answers.length == 6 || answers.length == 7) && isNaN(answer)) {
     console.log("Please enter a number");
     continue;
   }
 
+  // correct input (only M, F or X)
   if (answers.length == 3 && !["M", "F", "X"].includes(answer)) {
     console.log("Please fill in: M, F or X");
     continue;
   }
 
+  // correct input (only M, F, X or B)
   if (answers.length == 4 && !["M", "F", "X", "B"].includes(answer)) {
     console.log("Please fill in: M, F, X or B");
     continue;
   }
 
+  // correct input (only rural or city)
   if (answers.length == 5 && !["rural", "city"].includes(answer)) {
     console.log("Please fill in: rural or city")
     continue;
   }
 
+  // correct input (only 18+)
   if ((answers.length == 6 || answers.length == 7) && answer < 18) {
     console.log("All matches have to 18+ years");
     continue;
   }
 
+  // correct input (max can't be lower than min)
   if (answers.length == 7 && answer < answers[6]) {
     console.log("The maximum age can't be lower than the minimum age");
     continue;
@@ -85,11 +92,12 @@ profile.max_age_interest = +answers[7];
 // log your own profile
 console.log(`\nYour profile: \nI am ${profile.first_name} ${profile.last_name} and I am ${profile.age} years old. I identify myself as a ${profile.gender} and am interested in ${profile.gender_interest}. My current location is: ${profile.location}. And I am looking for a parter who is between ${profile.min_age_interest} and ${profile.max_age_interest} years old.\n`);
 
-// loop that iterates on the mockData array
 console.log(`The amount of people using the Winc Winc app (at this moment): ${mockData.length}. Based on your profile we have matched you with the following people:\n`);
 
+// set counter for matches
 let counter = 0;
 
+// loop that iterates on the mockData array
 for (let i = 0; i < mockData.length; i++) {
   if (profile.age >= mockData[i].min_age_interest && profile.age <= mockData[i].max_age_interest) {
     if (mockData[i].min_age_interest <= profile.age && mockData[i].max_age_interest >= profile.age) {
