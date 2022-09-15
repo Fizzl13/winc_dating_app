@@ -3,7 +3,7 @@
 ## Table of contents
 * [General info](#general-info)
 * [Technologies](#technologies)
-* [Illustrations](#illustrations)
+* [Demo](#demo)
 * [Acknowledgements](#acknowledgements)
 
 ## General info
@@ -17,14 +17,14 @@ The app will get relevant data from the user and match the user with another per
 ## Technologies
 * JavaScript
 
-
-## Illustrations
+## Demo
+Demo can be found [here](https://replit.com/@vincentlemstra/WINC-dating-app?v=1)
 
 ## Acknowledgements
 * This ap was created for [WINC academy](https://www.wincacademy.nl/#).
 
 
-
+ 
 
 
 

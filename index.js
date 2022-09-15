@@ -1,7 +1,5 @@
 'use strict'; 
 
-// task: get relevant data from the user and match the user with another person based on certain preferences.
-
 const mockData = require('./mockData.js').data;
 
 console.log('Welcome! You will be asked a couple of questions in order to create your profile: \n');
@@ -9,7 +7,7 @@ console.log('Welcome! You will be asked a couple of questions in order to create
 // empty profile object
 const profile = {};
 
-// Variable array with questions
+// variable array with questions
 const questions = [
   'What is your first name?',
   'What is your last name?',
