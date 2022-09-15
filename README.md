@@ -18,7 +18,7 @@ The app will get relevant data from the user and match the user with another per
 * JavaScript
 
 ## Demo
-Demo can be found [here](https://replit.com/@vincentlemstra/WINC-dating-app?v=1)
+Demo can be found [here](https://replit.com/@vincentlemstra/WINC-dating-app?v=1).
 
 ## Acknowledgements
 * This ap was created for [WINC academy](https://www.wincacademy.nl/#).
