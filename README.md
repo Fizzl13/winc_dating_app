@@ -9,7 +9,7 @@
 * [Acknowledgements](#acknowledgements)
 
 ## General info
-This Dating App was created as my final project to finish my online Web Development bootcamp (WINC academy).
+This Dating App was created as my final project to finish my online Web Development Bootcamp (WINC academy).
 The app will get relevant data from the user and match the user with another person based on certain preferences.
 
 ## Technologies
@@ -20,18 +20,12 @@ The app will get relevant data from the user and match the user with another per
 - Validating user input.
 
 ## Demo
-Demo can be found [here](https://replit.com/@vincentlemstra/WINC-dating-app?v=1).
+The demo can be found [here](https://replit.com/@vincentlemstra/WINC-dating-app?v=1).
 
 ## Screenshots
 ![winc_dating_app](https://user-images.githubusercontent.com/22345585/191082934-ead7626d-31c3-4881-85ee-ade4374c8469.gif)
 
 
 ## Acknowledgements
-* This app was created for [WINC academy](https://www.wincacademy.nl/#).
-
-
- 
-
-
-
+* This app was created for [WINC Academy](https://www.wincacademy.nl/#).
 
